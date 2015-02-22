@@ -1,0 +1,5 @@
+1.0.1: First version of CommentSystem
+1.0.2:
+    - Comments table
+    - create_comments_table.php
+1.0.3: Long load fix

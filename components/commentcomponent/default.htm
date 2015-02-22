@@ -1,0 +1,23 @@
+<form
+        data-request="{{ __SELF__ }}::onAddComment"
+        data-request-success="$('#name, #email, #comment').val('')"
+        data-request-update="'{{ __SELF__ }}::comments': '#result'"
+        >
+    <div class="form-group">
+        <label for="name">Név</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Név" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+        <label for="comment">Megjegyzés</label>
+        <textarea class="form-control" rows="3" id="comment" name="comment" placeholder="Megjegyzés" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Beküld</button>
+</form>
+
+<ul id="result">
+    {% partial __SELF__ ~ '::comments' comments=__SELF__.comments %}
+</ul>
