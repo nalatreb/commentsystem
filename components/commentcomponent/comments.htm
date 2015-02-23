@@ -1,3 +1,15 @@
 {% for comment in comments %}
-    <li>{{ comment.name }}<br>{{ comment.comment }}</li>
+    <div class="row">
+        <div class="col-sm-7">
+            <strong>{{ comment.name }}</strong>
+        </div>
+        <div class="col-sm-5 text-right">
+            {{ comment.created_at }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7 text-justify">
+            {{ comment.comment }}
+        </div>
+    </div>
 {% endfor %}

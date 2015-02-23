@@ -10,7 +10,7 @@ class CommentComponent extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'CommentComponent Component',
+            'name'        => 'Comment Component',
             'description' => 'No description provided yet...'
         ];
     }
