@@ -2,6 +2,9 @@
     <div class="row">
 
         <div class="col-sm-5 col-sm-offset-1">
+            {% if error_msg %}
+                <div class="alert alert-danger" role="alert"></div>
+            {% endif %}
             <form
                     data-request="{{ __SELF__ }}::onAddComment"
                     data-request-success="$('#name, #email, #comment').val('')"
