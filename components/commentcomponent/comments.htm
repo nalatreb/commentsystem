@@ -1,15 +1,13 @@
 {% for comment in comments %}
-    <div class="row">
-        <div class="col-sm-7">
-            <strong>{{ comment.name }}</strong>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="icon-user"></i> {{ comment.name }}</h3>
         </div>
-        <div class="col-sm-5 text-right">
-            {{ comment.created_at }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-7 text-justify">
+        <div class="panel-body">
             {{ comment.comment }}
+        </div>
+        <div class="panel-footer">
+            <i class="icon-calendar"></i> {{ comment.created_at }}
         </div>
     </div>
 {% endfor %}
