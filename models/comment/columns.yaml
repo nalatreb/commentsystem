@@ -6,3 +6,18 @@ columns:
     id:
         label: ID
         searchable: true
+    name:
+        label: wboyz.commentsystem::lang.comment.name
+        searchable: true
+    email:
+        label: wboyz.commentsystem::lang.comment.email
+        searchable: true
+    comment:
+        label: wboyz.commentsystem::lang.comment.comment
+        searchable: true
+    is_active:
+        label: wboyz.commentsystem::lang.comment.is_active
+        searchable: true
+    created_at:
+        label: wboyz.commentsystem::lang.comment.created_at
+        searchable: true
