@@ -1,6 +1,6 @@
 <div class="row" id="comment-system">
 
-    <div class="col-md-5 col-md-offset-1 col-sm-6">
+    <div class="col-sm-6">
         <div class="affix">
             <div id="error_msg">
                 {% partial __SELF__ ~ '::error_msg' error_msg=__SELF__.error_msg %}
@@ -33,7 +33,7 @@
             </form>
         </div>
     </div>
-    <div class="col-md-5 col-sm-6" id="result">
+    <div class="col-sm-6" id="result">
         {% partial __SELF__ ~ '::comments' comments=__SELF__.comments %}
     </div>
 
