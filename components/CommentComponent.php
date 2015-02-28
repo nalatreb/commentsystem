@@ -27,6 +27,7 @@ class CommentComponent extends ComponentBase
     public function onRun()
     {
         $this->addCss('/plugins/wboyz/commentsystem/assets/css/comment.css');
+        $this->addJs('/plugins/wboyz/commentsystem/assets/js/comment.js');
         $this->error_msg = false;
         $this->operation = $this->generateCaptcha();
         $this->comments = DB::table('wboyz_commentsystem_comments')
@@ -59,6 +60,10 @@ class CommentComponent extends ComponentBase
             ->get();
     }
 
+    /*
+     * TODO
+     * the session doesnt refresh after a bad captcha
+     */
     private function generateCaptcha()
     {
         $operands = array('+', '*');

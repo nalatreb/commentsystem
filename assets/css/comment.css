@@ -1,5 +1,6 @@
 @media (max-width: 768px) {
     #comment-system .affix {
         position: static;
+        width: auto;
     }
 }
