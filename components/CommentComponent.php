@@ -26,6 +26,7 @@ class CommentComponent extends ComponentBase
 
     public function onRun()
     {
+        $this->addCss('/plugins/wboyz/commentsystem/assets/css/comment.css');
         $this->error_msg = false;
         $this->operation = $this->generateCaptcha();
         $this->comments = DB::table('wboyz_commentsystem_comments')
