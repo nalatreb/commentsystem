@@ -5,3 +5,6 @@
 1.0.3: Long load fix
 1.0.4: Improved design
 1.0.5: HTML required php fallback
+1.0.6: Add orderBy to comment list
+1.0.7: Form fixed layout
+1.0.8: Refresh the captcha after submit

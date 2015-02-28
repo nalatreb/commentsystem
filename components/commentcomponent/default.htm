@@ -2,33 +2,46 @@
     <div class="row">
 
         <div class="col-sm-5 col-sm-offset-1">
-            {% if error_msg %}
-                <div class="alert alert-danger" role="alert"></div>
-            {% endif %}
-            <form
-                    data-request="{{ __SELF__ }}::onAddComment"
-                    data-request-success="$('#name, #email, #comment').val('')"
-                    data-request-update="'{{ __SELF__ }}::comments': '#result'"
-                    >
-                <div class="form-group">
-                    <label for="name">Név</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Név" required>
+            <div class="affix">
+                <div id="error_msg">
+                    {% partial __SELF__ ~ '::error_msg' error_msg=__SELF__.error_msg %}
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="comment">Megjegyzés</label>
+                <form
+                        class="comment-form"
+                        data-request="{{ __SELF__ }}::onAddComment"
+                        data-request-success="$('#name, #email, #comment, #captcha').val('')"
+                        data-request-update="'{{ __SELF__ }}::comments': '#result',
+                            '{{ __SELF__ }}::operation': '#captcha_operation',
+                            '{{ __SELF__ }}::error_msg': '#error_msg'"
+                        >
+                    <div class="form-group">
+                        <label for="name">Név</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Név" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Megjegyzés</label>
                     <textarea class="form-control" rows="3" id="comment" name="comment" placeholder="Megjegyzés"
                               required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Beküld</button>
-            </form>
+                    </div>
+                    <div class="form-group" id="captcha_operation">
+                        {% partial __SELF__ ~ '::operation' operation=__SELF__.operation %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Beküld</button>
+                </form>
+            </div>
         </div>
         <div class="col-sm-5" id="result">
             {% partial __SELF__ ~ '::comments' comments=__SELF__.comments %}
         </div>
 
+    </div>
+    <div class="row">
+        <div class="col-sm-12 ajax">
+
+        </div>
     </div>
 </div>
