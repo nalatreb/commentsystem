@@ -54,6 +54,9 @@ class CommentComponent extends ComponentBase
         }
 
         $this->page['operation'] = $this->generateCaptcha();
+        // Comment::where('is_active', '=', '1')
+        //    ->orderBy('created_at', 'desc')
+        //    ->get();
         $this->page['comments'] = DB::table('wboyz_commentsystem_comments')
             ->where('is_active', '=', '1')
             ->orderBy('created_at', 'desc')
