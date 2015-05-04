@@ -38,9 +38,16 @@ class Plugin extends PluginBase
                 'label'       => 'wboyz.commentsystem::lang.comment.menu_label',
                 'url'         => Backend::url('wboyz/commentsystem/comments'),
                 'icon'        => 'icon-comments-o',
-                'permissions' => ['wboyz.commentsystem'],
-                'order'       => 500,
+                'permissions' => ['wboyz.commentsystem.*'],
+                'order'       => 500
             ]
+        ];
+    }
+    
+    public function registerPermissions()
+    {
+        return [
+            'wboyz.commentsystem.*'    => ['label' => 'wboyz.commentsystem::lang.comment.menu_label']
         ];
     }
 

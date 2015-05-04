@@ -8,6 +8,8 @@ use Backend\Classes\Controller;
  */
 class Comments extends Controller
 {
+    public $requiredPermissions = ['wboyz.commentsystem.comments'];
+    
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController'

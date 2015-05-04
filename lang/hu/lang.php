@@ -6,6 +6,7 @@ return [
         'description' => 'Egy egyszerű katalógus kategóriákkal és termékekkel.',
     ],
     'comment' => [
+        'new_comment' => 'Új komment',
         'menu_label' => 'Komment',
         'menu_description' => 'Kommentek kezelése.',
         'comments' => 'Kommentek',

@@ -6,6 +6,7 @@ return [
         'description' => 'A lightweight catalog with categories and products with.',
     ],
     'comment' => [
+        'new_comment' => 'New Comment',
         'menu_label' => 'Comment',
         'menu_description' => 'Manage Comments',
         'comments' => 'Comments',
